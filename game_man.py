@@ -92,10 +92,10 @@ def replace(skill):
 
 
 def main():
-    fake = Faker("ru_RU")
-    scr = os.path.join('c:', 'image')
-    os.makedirs(scr, mode=0o777, exist_ok=True)
     for bum in range(10):
+        fake = Faker("ru_RU")
+        scr = os.path.join("result")
+        os.makedirs(scr, mode=0o777, exist_ok=True)
         list_lines_random = random.sample(LIST_LINES, 3)
         renamed_skills = [replace(skill) for skill in list_lines_random]
         context = {
